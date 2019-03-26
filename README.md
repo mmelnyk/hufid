@@ -3,10 +3,12 @@ HuFID has been created with one purpose:  to help with sharing of a unique piece
 
 ## Format
 An ID is a string with groups of 5 symbols with a possible separator (-) between groups. Every group encodes 25 bits (20 bits for the last group).
+
 Example: SVXVC-2T9E2-75VKJ-YCL3E-GX7C6
 
 ## Alphabet
 0123456789ACEFGHJKLMNPQRSTUVWXYZ
+
 Separator: - (can be any position except the last)
 
 ## Normalization
