@@ -2,8 +2,39 @@ package hufid
 
 import (
 	"bytes"
+	"fmt"
 	"testing"
 )
+
+func ExampleUseUniqID() {
+	id := NewUniqID(5)
+	fmt.Println(id)
+}
+
+func ExampleUseID() {
+	id := NewID(2, bytes.NewReader([]byte{0x11, 0x22, 0x33, 0x44}))
+	fmt.Println(id)
+	// Output: KJ863-2100A
+}
+
+func ExampleIDValidation() {
+	var id ID = "KJ863-2100A"
+	fmt.Println(id.Validate())
+	id += "5"
+	fmt.Println(id.Validate())
+	// Output:
+	// true
+	// false
+}
+
+func ExampleIDNormalization() {
+	var id ID = "kJB63-2IO0A"
+	fmt.Println(id.Normalize())
+	fmt.Println(id)
+	// Output:
+	// true
+	// KJ863-2100A
+}
 
 func TestBasic(t *testing.T) {
 	id := NewUniqID(5)
