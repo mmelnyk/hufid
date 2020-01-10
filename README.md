@@ -1,4 +1,6 @@
 # Human-Friendly IDs
+[![Actions Status](https://github.com/mmelnyk/hufid/workflows/test/badge.svg)](https://github.com/mmelnyk/hufid/actions) [![GoDoc](https://godoc.org/go.melnyk.org/hufid?status.svg)](https://godoc.org/go.melnyk.org/hufid) [![Go Report Card](https://goreportcard.com/badge/go.melnyk.org/hufid)](https://goreportcard.com/report/go.melnyk.org/hufid)
+
 HuFID has been created with one purpose:  to help with sharing of a unique piece of info between two endpoints via human input with a possibility of correctness validation of this input. Example of usage: verbal sharing of PSK or initial tokens.
 
 ## Format
