@@ -8,7 +8,7 @@ import (
 func TestBasic(t *testing.T) {
 	id := NewUniqID(5)
 	if len(id) != 4*(symbolsPerGroup+1)+symbolsPerGroup {
-		t.Errorf("Generated id does not have expected lenght (%d)", len(id))
+		t.Errorf("Generated id does not have expected length (%d)", len(id))
 	}
 	if id.Normalize() != true {
 		t.Errorf("Generated id must be valid during normalizing (%s)", id)
@@ -21,7 +21,7 @@ func TestBasic(t *testing.T) {
 func TestBasicFromData(t *testing.T) {
 	id := NewID(2, bytes.NewReader([]byte{0x28}))
 	if len(id) != 1*(symbolsPerGroup+1)+symbolsPerGroup {
-		t.Errorf("Generated id does not have expected lenght (%d)", len(id))
+		t.Errorf("Generated id does not have expected length (%d)", len(id))
 	}
 	if id != "81000-0000Q" {
 		t.Errorf("Generated id must be equal to expected id (%s)", id)
